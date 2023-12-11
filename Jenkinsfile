@@ -1,7 +1,8 @@
 pipeline {
     agent any
-     tools { 
-        nodejs "node 21.1.0" 
+    
+    tools { 
+        nodejs "nodejs" // Corrigido para "nodejs"
     }
     
     stages {
@@ -22,6 +23,12 @@ pipeline {
             steps {
                 sh 'npm run test'
             }
+        }
+    }
+    
+    post {
+        always {
+            // Clean up steps, if needed
         }
     }
 }
