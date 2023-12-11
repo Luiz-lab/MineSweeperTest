@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches:[[name:'*/main']],userRemoteConfigs: [[url: '']]])
+                checkout([$class: 'GitSCM', branches:[[name:'*/main']],userRemoteConfigs: [[url: 'https://github.com/Luiz-lab/MineSweeperTest.git']]])
             }
         }
 
