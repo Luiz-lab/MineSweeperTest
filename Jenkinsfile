@@ -15,6 +15,7 @@ pipeline{
             steps{
                 sh "node -v"
                 sh 'npm install'
+                echo "Hello"
             }
         }
 
