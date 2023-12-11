@@ -8,8 +8,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Luiz-lab/MineSweeperTest.git']]])
-            }
+            echo "DEBUG: Iniciando etapa de checkout"
+            checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Luiz-lab/MineSweeperTest.git']]])
+            echo "DEBUG: Concluída a etapa de checkout"            }
         }
         
         stage('Build') {
